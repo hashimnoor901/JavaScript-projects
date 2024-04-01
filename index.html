@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <a href="#project1">Project 1</a>
+    <a href="#project2">Project 2</a>
+
+    <!-- Placeholders for project content -->
+    <div id="project1" style="display: none;">
+        <!-- Content for Project 1 -->
+        <h2>Project 1</h2>
+        <p>This is the content of Project 1.</p>
+    </div>
+    <div id="project2" style="display: none;">
+        <!-- Content for Project 2 -->
+        <h2>Project 2</h2>
+        <p>This is the content of Project 2.</p>
+    </div>
+
+    <!-- JavaScript to handle routing -->
+    <script>
+        // Function to show project content based on hash
+        function showProject(hash) {
+            // Hide all project content
+            var projects = document.querySelectorAll('[id^="project"]');
+            projects.forEach(function(project) {
+                project.style.display = 'none';
+            });
+
+            // Show the project corresponding to the hash
+            var projectToShow = document.getElementById(hash);
+            if (projectToShow) {
+                projectToShow.style.display = 'block';
+            }
+        }
+
+        // Function to handle hash change events
+        function handleHashChange() {
+            var hash = window.location.hash.substr(1); // Get hash without the #
+            showProject(hash);
+        }
+
+        // Add event listener for hash change events
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Initial call to show project based on current hash
+        handleHashChange();
+    </script>
+</body>
+</html>

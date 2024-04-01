@@ -16,9 +16,10 @@ form.addEventListener('submit',(e)=>{ // submit is new event this works on forms
     else if(weight === '' || weight < 0 || isNaN(weight)){
         results.innerHTML = `Please give valid weight ${weight}`
     }
-    esle{
+    else{
        const bmi = (weight/((height*height)/10000)).toFixed(2)
        // show results
        results.innerHTML = `<span>${bmi}</span>`
     }
-})
+})  
+
