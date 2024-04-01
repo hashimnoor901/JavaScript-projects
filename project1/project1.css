@@ -1,0 +1,34 @@
+#button{
+    border: 1px solid black;
+}
+.grey {
+    background-color: grey;
+    padding: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.white {
+    background-color: white;
+    padding: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.blue {
+    background-color: blue;
+    padding: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.yellow {
+    background-color: yellow;
+    padding: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
