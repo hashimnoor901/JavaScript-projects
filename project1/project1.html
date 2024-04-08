@@ -89,5 +89,68 @@
         </ul>
    </div>
    <script src="project5.js"></script>
+   <!-- Async Projects -->
+   <div>
+    <h2 id="async">Async Projects</h2>
+    <button id="stop">stop</button>
+    <script>
+        const changeText = function()   {
+            document.querySelector('#async').innerHTML = 'Changed with Asynchoronous'
+        }
+        // setTimeout(function(){
+        //     alert('set time completed')
+        // },2000)
+       const changeMe =  setTimeout(changeText,2000)
+
+       // used to clear setTimeout
+    //    clearTimeout(changeMe,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+    })
+    </script>
+   </div>
+
+   <!-- setInterval and clearInterval -->
+
+   <!-- <div>
+    <h2>setInterval and clearInterval</h2>
+    <button id="startbtn">start</button>
+    <button id="stopbtn">stop</button>
+
+    <script>
+        const startInterval = document.getElementById('startbtn').addEventListener('click',()=>{
+            const hashim = function(str){
+                console.log(`${str},hashim`)
+            }
+            const stopMe = setInterval(hashim,1000,'hi')
+        })
+
+        document.getElementById('stopbtn').addEventListener('click',()=>{
+            clearInterval(startInterval)
+            console.log('stopped')
+        })
+       
+    </script>
+   </div> -->
+
+   <!-- Project change background after 1 second -->
+   <div>
+   <h2>Click Start Button To Change Background</h2> 
+   <button id="startnow">start</button>
+   <button id="stopnow">stop</button>
+    <script src="randomColor.js"></script>
+   </div>
+
+   <!-- project to check which keyboard key is pressed -->
+   
+   <div id="insert">
+    <h2>
+        check which Keyboard key pressed
+        </h2>
+        <h3 class="key">press the key and watch the magic</div>
+
+            <script src="keyboard.js"></script>
+   </div>
 </body>
 </html>
