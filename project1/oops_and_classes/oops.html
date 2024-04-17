@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Constructor in JavaScript</h2>
+
+</body>
+<script>
+function user(name,last,age){
+    this.username = name
+    this.lastname = last
+    this.age = age
+}
+const user1 = new user('abdul','hashmi',18)
+// new keyword generate constructor function and make copy of another object
+const user2 = new user('hashmi','noor',20)
+
+console.log('user is',user2)
+console.log(user1)
+</script>
+</html>
