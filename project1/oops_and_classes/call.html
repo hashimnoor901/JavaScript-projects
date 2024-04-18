@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Call and This in JS</h2>
+
+</body>
+<script>
+    // function user(username) {
+
+    //     this.username = username
+    //     console.log("user called")
+    // }
+    // function userInfo(username,email,password){
+    //     user.call(this,username) // ye user function ko call krta ha or is function ma use ho rha ha
+    //     this.email = email
+    //     this.password = password
+    // }
+    // const createuser = new userInfo('hashim','hashimn901.com',123)
+    // console.log(createuser)
+
+
+    function city(name){
+        this.name = name
+    }
+
+    function callCity(cityname,continent,abr){
+        city.call(this,cityname)
+        this.continent = continent
+        this.abr = abr
+    }
+    let createCity = new callCity('dubai','asia','UAE')
+    console.log(createCity)
+</script>
+</html>
