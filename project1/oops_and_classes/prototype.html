@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Prototype in JavaScript</h2>
+
+</body>
+<script>
+    let myheros = ['hite kum','normouno']
+    //this created method allow to all objects and arrays
+    let heros = {
+        name:'jad',
+        performance:'good',
+
+    }
+    Object.prototype.hashim = function(){
+        console.log(`this is prototyping function`)
+    }
+    // ye sirf arrays ko access kray ga
+    Array.prototype.heyHashim = function(){
+        console.log('hey hashim')
+    }
+
+
+    // myheros.hashim()
+    // heros.hashim()
+
+    myheros.heyHashim() // ye code sirf array pr chlay ga
+    // heros.heyHashim() // objects pr error day ga
+    
+    
+
+    // Inheritance
+
+    const user = {
+        name:'hashim',
+        dept : 'CS',
+    }
+
+    const teacher = {
+        makeVideo : true
+    }
+
+    const QASupport = {
+        makeAssig : 'js Assingment'
+    }
+    Object.setPrototypeOf(teacher,QASupport)
+    // is ko inheritance kehtay hein now teacher can access QASupport properties
+    console.log(teacher.makeAssig)
+
+    // how to make own property or method like trueLength for remove space
+
+    let username = 'hashim noor  '
+    String.prototype.trueLength = function(){ // this is protyping 
+        console.log(`${this}`)
+        console.log(`${this.trim().length}`)
+    }
+    console.log(username.trueLength())
+</script>
+</html>
